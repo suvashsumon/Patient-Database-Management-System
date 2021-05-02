@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>493</width>
-    <height>306</height>
+    <width>436</width>
+    <height>261</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,36 +15,32 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QPushButton" name="pushButton">
      <property name="font">
       <font>
-       <family>Sans Serif</family>
-       <pointsize>32</pointsize>
+       <pointsize>29</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">text-align : center;</string>
+      <string notr="true">color: rgb(52, 101, 164);</string>
      </property>
      <property name="text">
-      <string>Log In</string>
+      <string>  Log In</string>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+     <property name="icon">
+      <iconset>
+       <normaloff>icons/account.png</normaloff>icons/account.png</iconset>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_2">
-     <property name="font">
-      <font>
-       <family>Sans Serif</family>
-       <pointsize>18</pointsize>
-      </font>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
      </property>
-     <property name="text">
-      <string>User Name</string>
+     <property name="flat">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -56,18 +52,11 @@
        <pointsize>16</pointsize>
       </font>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_3">
-     <property name="font">
-      <font>
-       <family>Sans Serif</family>
-       <pointsize>18</pointsize>
-      </font>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
-     <property name="text">
-      <string>Password</string>
+     <property name="placeholderText">
+      <string>Username</string>
      </property>
     </widget>
    </item>
@@ -79,6 +68,15 @@
        <pointsize>16</pointsize>
       </font>
      </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -86,7 +84,7 @@
      <property name="font">
       <font>
        <family>Sans Serif</family>
-       <pointsize>21</pointsize>
+       <pointsize>17</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
@@ -105,7 +103,7 @@ color: rgb(255, 255, 255);</string>
      <property name="font">
       <font>
        <family>Sans Serif</family>
-       <pointsize>17</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">

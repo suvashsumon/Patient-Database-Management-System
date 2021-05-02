@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Patient Database Magagement System</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	padding : 10px 10px 10px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>  Add Record</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/005-add.png</normaloff>icons/005-add.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	padding : 10px 10px 10px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>  Refresh</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/004-refresh-2.png</normaloff>icons/004-refresh-2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	padding : 10px 10px 10px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>  Show Chart</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/Bar-chart-icon.png</normaloff>icons/Bar-chart-icon.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	padding : 10px 10px 10px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>  Settings</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/settings.png</normaloff>icons/settings.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	padding : 10px 10px 10px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>  Account</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/account.png</normaloff>icons/account.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Search By:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Age</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sex</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Address</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>C/C</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>O/E</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>R/F</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Path. Report</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Radiology</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CT</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MRI</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dxs.</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Comment</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>What to search:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(32, 74, 135);</string>
+        </property>
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Age</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Sex</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>C/C</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>O/E</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>R/F</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Path. Report</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Rediology</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CT</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>MRI</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Pic</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Dxs.</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Comment</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionAdd_Record"/>
+    <addaction name="actionRefresh"/>
+    <addaction name="actionFind_Entry"/>
+    <addaction name="separator"/>
+    <addaction name="actionSettings"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuCode">
+    <property name="title">
+     <string>Code</string>
+    </property>
+    <addaction name="actionGithub_com"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <widget class="QMenu" name="menuLog_Out">
+    <property name="title">
+     <string>Log Out</string>
+    </property>
+    <addaction name="actionRemove_Account"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuCode"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuLog_Out"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdd_Record">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/005-add.png</normaloff>icons/005-add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Record</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/004-refresh-2.png</normaloff>icons/004-refresh-2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </action>
+  <action name="actionFind_Entry">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Bar-chart-icon.png</normaloff>icons/Bar-chart-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Chart</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/settings.png</normaloff>icons/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/close.png</normaloff>icons/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionGithub_com">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/github-icon-png-71-64x64.png</normaloff>icons/github-icon-png-71-64x64.png</iconset>
+   </property>
+   <property name="text">
+    <string>Github.com</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/question.png</normaloff>icons/question.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionRemove_Account">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Logout_37127.png</normaloff>icons/Logout_37127.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove Account</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
