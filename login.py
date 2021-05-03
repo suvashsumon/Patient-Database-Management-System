@@ -6,7 +6,7 @@ import sys
 class UI(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi("login.ui", self)
+        uic.loadUi("ui/login.ui", self)
 
         username = self.findChild(QTextEdit, 'username')
         password = self.findChild(QTextEdit, 'password')
@@ -24,14 +24,8 @@ class UI(QWidget):
 
     def location_on_the_screen(self):
         qr = self.frameGeometry()
-
-        # center point of screen
         cp = QDesktopWidget().availableGeometry().center()
-
-        # move rectangle's center point to screen's center point
         qr.moveCenter(cp)
-
-        # top left of rectangle becomes top left of window centering it
         self.move(qr.topLeft())
 
 
