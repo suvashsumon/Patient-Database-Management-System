@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>827</width>
     <height>600</height>
    </rect>
   </property>
@@ -20,12 +20,12 @@
       <item>
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>  </string>
+         <string/>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="addrecord">
         <property name="font">
          <font>
           <pointsize>15</pointsize>
@@ -175,7 +175,7 @@
       <item>
        <widget class="QLabel" name="label_6">
         <property name="text">
-         <string>  </string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -186,7 +186,7 @@
       <item>
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>  </string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -327,7 +327,7 @@ background-color: rgb(32, 74, 135);</string>
       <item>
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>  </string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -419,7 +419,7 @@ background-color: rgb(32, 74, 135);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>827</width>
      <height>22</height>
     </rect>
    </property>
@@ -427,7 +427,7 @@ background-color: rgb(32, 74, 135);</string>
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionAdd_Record"/>
+    <addaction name="addrecordmenu"/>
     <addaction name="actionRefresh"/>
     <addaction name="actionFind_Entry"/>
     <addaction name="separator"/>
@@ -459,13 +459,16 @@ background-color: rgb(32, 74, 135);</string>
    <addaction name="menuLog_Out"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionAdd_Record">
+  <action name="addrecordmenu">
    <property name="icon">
     <iconset>
      <normaloff>icons/005-add.png</normaloff>icons/005-add.png</iconset>
    </property>
    <property name="text">
     <string>Add Record</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
    </property>
   </action>
   <action name="actionRefresh">
@@ -476,6 +479,9 @@ background-color: rgb(32, 74, 135);</string>
    <property name="text">
     <string>Refresh</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
   </action>
   <action name="actionFind_Entry">
    <property name="icon">
@@ -484,6 +490,9 @@ background-color: rgb(32, 74, 135);</string>
    </property>
    <property name="text">
     <string>Show Chart</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
   </action>
   <action name="actionSettings">
