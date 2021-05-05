@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>368</width>
-    <height>403</height>
+    <height>354</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,7 +44,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="name">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -56,7 +56,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2">
+      <widget class="QLineEdit" name="email">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -68,7 +68,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="phone">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -80,7 +80,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_4">
+      <widget class="QLineEdit" name="username">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -92,7 +92,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_5">
+      <widget class="QLineEdit" name="password">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -107,22 +107,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_6">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-       <property name="placeholderText">
-        <string>Confirm password</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="createacc">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -140,7 +125,7 @@ color: rgb(255, 255, 255);</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="login">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -154,6 +139,25 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>Already have an account</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="message">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(239, 41, 41);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>

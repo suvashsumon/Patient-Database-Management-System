@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+from userdataclass import jsondata
 import sys
 
 
@@ -8,19 +9,26 @@ class UI(QWidget):
         super().__init__()
         uic.loadUi("ui/login.ui", self)
 
-        username = self.findChild(QTextEdit, 'username')
-        password = self.findChild(QTextEdit, 'password')
+        username = self.findChild(QLineEdit, 'username')
+        password = self.findChild(QLineEdit, 'password')
+        message = self.findChild(QLabel, 'message')
         login = self.findChild(QPushButton, 'login')
         login.clicked.connect(self.clicked_btn)
         createacc = self.findChild(QPushButton, 'createaccount')
 
     def clicked_btn(self):
+        # get data from user
         txtusername = self.username.text()
         txtpass = self.password.text()
-        if txtusername == "suvashkumar" and txtpass == "0055":
-            print("Hello world")
+
+        # get data from userdata.json file
+        userdata = jsondata()
+        info = userdata.getdata()
+
+        if txtusername == info['username'] and txtpass == info['pass']:
+            self.message.setText("Done!!")
         else:
-            print("Sorry username or password is incorrect.")
+            self.message.setText("Incorrect password or username")
 
     def location_on_the_screen(self):
         qr = self.frameGeometry()
