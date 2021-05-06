@@ -3,6 +3,7 @@ from PyQt5 import uic
 from PyQt5 import *
 import sys
 from userdataclass import jsondata
+from databasesettings import Settings
 from dashboard import Dashboard
 
 
@@ -44,9 +45,9 @@ class Createaccount(QWidget):
             data.writedata(info)
 
             # show dashboard
-            self.dashboard = Dashboard()
-            self.dashboard.location_on_the_screen()
-            self.dashboard.show()
+            self.settings = Settings()
+            self.settings.location_on_the_screen()
+            self.settings.show()
             self.close()
 
 # app = QApplication([])

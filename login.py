@@ -14,7 +14,6 @@ class Login(QWidget):
         password = self.findChild(QLineEdit, 'password')
         login = self.findChild(QPushButton, 'login')
         login.clicked.connect(self.clicked_login)
-        createacc = self.findChild(QPushButton, 'createaccount')
 
     def clicked_login(self):
         # get data from user
