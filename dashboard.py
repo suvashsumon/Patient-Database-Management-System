@@ -4,7 +4,7 @@ from PyQt5 import *
 import sys
 
 
-class UI(QMainWindow):
+class Dashboard(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("ui/dashboard.ui", self)
@@ -27,8 +27,8 @@ class UI(QMainWindow):
         print("add record clicked")
 
 
-app = QApplication([])
-window = UI()
-window.location_on_the_screen()
-window.show()
-app.exec_()
+# app = QApplication([])
+# window = Dashboard()
+# window.location_on_the_screen()
+# window.show()
+# app.exec_()

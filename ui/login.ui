@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>436</width>
-    <height>261</height>
+    <height>241</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -95,43 +95,6 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Log In</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="createaccount">
-     <property name="font">
-      <font>
-       <family>Sans Serif</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 121, 0);
-background-color: rgb(206, 92, 0);
-color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Create New Account</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="message">
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(239, 41, 41);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>

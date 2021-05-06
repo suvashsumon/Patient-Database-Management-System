@@ -124,43 +124,6 @@ color: rgb(255, 255, 255);</string>
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QPushButton" name="login">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(206, 92, 0);
-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>Already have an account</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="message">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(239, 41, 41);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
   </layout>

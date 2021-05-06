@@ -3,9 +3,10 @@ from PyQt5 import uic
 from PyQt5 import *
 import sys
 from userdataclass import jsondata
+from dashboard import Dashboard
 
 
-class UI(QWidget):
+class Createaccount(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi("ui/createaccount.ui", self)
@@ -15,12 +16,9 @@ class UI(QWidget):
         username = self.findChild(QLineEdit, 'username')
         password = self.findChild(QLineEdit, 'password')
         createaccount = self.findChild(QPushButton, 'createacc')
-        login = self.findChild(QPushButton, 'login')
-        message = self.findChild(QLabel, 'message')
 
         # define signal for buttons
         createaccount.clicked.connect(self.click_create)
-        login.clicked.connect(self.click_login)
 
     def location_on_the_screen(self):
         qr = self.frameGeometry()
@@ -39,17 +37,20 @@ class UI(QWidget):
             'datapath' : ''
         }
         if self.password.text()=='' or self.username.text()=='':
-            self.message.setText("You must provide username and password!!")
+            QMessageBox.about(self, "Error", "You must provide username and password")
         else:
             # use jsondata class to store info
             data = jsondata()
             data.writedata(info)
 
-    def click_login(self):
-        pass
+            # show dashboard
+            self.dashboard = Dashboard()
+            self.dashboard.location_on_the_screen()
+            self.dashboard.show()
+            self.close()
 
-app = QApplication([])
-window = UI()
-window.location_on_the_screen()
-window.show()
-app.exec_()
+# app = QApplication([])
+# window = Createaccount()
+# window.location_on_the_screen()
+# window.show()
+# app.exec_()
