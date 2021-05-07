@@ -52,9 +52,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-113</y>
           <width>805</width>
-          <height>474</height>
+          <height>573</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -175,6 +175,22 @@
          </item>
          <item>
           <widget class="QPlainTextEdit" name="plainTextEdit_4"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Rediology :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="listWidget">
+           <item>
+            <property name="text">
+             <string>icons/images.jpg</string>
+            </property>
+           </item>
+          </widget>
          </item>
         </layout>
        </widget>
