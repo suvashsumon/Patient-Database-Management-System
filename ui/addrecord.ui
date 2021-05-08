@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>937</width>
+    <width>682</width>
     <height>1581</height>
    </rect>
   </property>
@@ -55,7 +55,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>917</width>
+        <width>662</width>
         <height>1477</height>
        </rect>
       </property>
@@ -72,7 +72,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit"/>
+            <widget class="QLineEdit" name="id"/>
            </item>
            <item>
             <widget class="QLabel" name="label_3">
@@ -82,7 +82,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_2"/>
+            <widget class="QLineEdit" name="name"/>
            </item>
           </layout>
          </item>
@@ -96,7 +96,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QComboBox" name="comboBox">
+            <widget class="QComboBox" name="sex">
              <item>
               <property name="text">
                <string>Male</string>
@@ -122,7 +122,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_4">
+            <widget class="QLineEdit" name="age">
              <property name="maxLength">
               <number>10</number>
              </property>
@@ -136,7 +136,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_3"/>
+            <widget class="QLineEdit" name="address"/>
            </item>
           </layout>
          </item>
@@ -148,7 +148,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="plainTextEdit"/>
+          <widget class="QPlainTextEdit" name="cc"/>
          </item>
          <item>
           <widget class="QLabel" name="label_8">
@@ -158,7 +158,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="plainTextEdit_2"/>
+          <widget class="QPlainTextEdit" name="oe"/>
          </item>
          <item>
           <widget class="QLabel" name="label_9">
@@ -168,7 +168,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="plainTextEdit_3"/>
+          <widget class="QPlainTextEdit" name="rf"/>
          </item>
          <item>
           <widget class="QLabel" name="label_10">
@@ -178,7 +178,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="plainTextEdit_4"/>
+          <widget class="QPlainTextEdit" name="pathreport"/>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -203,7 +203,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="addRediology">
              <property name="text">
               <string/>
              </property>
@@ -216,13 +216,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listWidget">
-           <item>
-            <property name="text">
-             <string>icons/images.jpg</string>
-            </property>
-           </item>
-          </widget>
+          <widget class="QListWidget" name="listRadiology"/>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -247,7 +241,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_4">
+            <widget class="QPushButton" name="addMri">
              <property name="text">
               <string/>
              </property>
@@ -260,7 +254,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listWidget_2"/>
+          <widget class="QListWidget" name="listMri"/>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -285,7 +279,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_5">
+            <widget class="QPushButton" name="addXray">
              <property name="text">
               <string/>
              </property>
@@ -298,7 +292,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listWidget_3"/>
+          <widget class="QListWidget" name="listXray"/>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -323,7 +317,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_6">
+            <widget class="QPushButton" name="addCtscan">
              <property name="text">
               <string/>
              </property>
@@ -336,7 +330,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listWidget_4"/>
+          <widget class="QListWidget" name="listCtscan"/>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -361,7 +355,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_7">
+            <widget class="QPushButton" name="addPics">
              <property name="text">
               <string/>
              </property>
@@ -374,7 +368,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listWidget_5"/>
+          <widget class="QListWidget" name="listPics"/>
          </item>
          <item>
           <widget class="QLabel" name="label_15">
@@ -384,7 +378,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="plainTextEdit_5"/>
+          <widget class="QPlainTextEdit" name="dxs"/>
          </item>
          <item>
           <widget class="QLabel" name="label_16">
@@ -394,7 +388,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit"/>
+          <widget class="QTextEdit" name="comments"/>
          </item>
         </layout>
        </item>
@@ -418,7 +412,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="addrecord">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
