@@ -4,7 +4,7 @@ from PyQt5 import *
 import sys
 
 
-class UI(QWidget):
+class Addrecord(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi("ui/addrecord.ui", self)
@@ -15,8 +15,8 @@ class UI(QWidget):
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
-app = QApplication([])
-window = UI()
-window.location_on_the_screen()
-window.show()
-app.exec_()
+# app = QApplication([])
+# window = Addrecord()
+# window.location_on_the_screen()
+# window.show()
+# app.exec_()

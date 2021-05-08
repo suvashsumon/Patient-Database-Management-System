@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5 import *
+from addrecord import Addrecord
 import sys
 
 
@@ -24,7 +25,9 @@ class Dashboard(QMainWindow):
         self.move(qr.topLeft())
 
     def add_record(self):
-        print("add record clicked")
+        self.window = Addrecord()
+        self.window.location_on_the_screen()
+        self.window.show()
 
 
 # app = QApplication([])
