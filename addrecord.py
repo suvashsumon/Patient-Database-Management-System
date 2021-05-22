@@ -155,8 +155,8 @@ class Addrecord(QWidget):
 
         self.close()
 
-app = QApplication([])
-window = Addrecord()
-window.location_on_the_screen()
-window.show()
-app.exec_()
+# app = QApplication([])
+# window = Addrecord()
+# window.location_on_the_screen()
+# window.show()
+# app.exec_()

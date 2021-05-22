@@ -37,7 +37,7 @@
 }</string>
         </property>
         <property name="text">
-         <string>  Add Record</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset>
@@ -52,7 +52,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="edit">
         <property name="font">
          <font>
           <pointsize>15</pointsize>
@@ -64,7 +64,34 @@
 }</string>
         </property>
         <property name="text">
-         <string>  Refresh</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>icons/edit.png</normaloff>icons/edit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="refresh">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	padding : 10px 10px 10px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
         </property>
         <property name="icon">
          <iconset>
@@ -91,7 +118,7 @@
 }</string>
         </property>
         <property name="text">
-         <string>  Show Chart</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset>
@@ -118,7 +145,7 @@
 }</string>
         </property>
         <property name="text">
-         <string>  Settings</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset>
@@ -158,7 +185,7 @@
 }</string>
         </property>
         <property name="text">
-         <string>  Account</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset>
