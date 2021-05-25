@@ -6,6 +6,7 @@ from PyQt5 import *
 from addrecord import Addrecord
 import sys
 
+from editItem import EditWindow
 from userdataclass import jsondata
 
 
@@ -32,6 +33,10 @@ class Dashboard(QMainWindow):
         # refresh action
         self.refreshaction = self.findChild(QAction, "actionRefresh")
         self.refreshaction.triggered.connect(self.refresh_table)
+
+        # edit button
+        self.editbtn = self.findChild(QPushButton, "edit")
+        self.editbtn.clicked.connect(self.edit_work)
 
     def location_on_the_screen(self):
         qr = self.frameGeometry()
@@ -76,10 +81,17 @@ class Dashboard(QMainWindow):
         conn.commit()
         conn.close()
 
+#  this function is for open edit window to edit selected item
+    def edit_work(self):
+        selected_id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
+        print(selected_id)
+        self.editwindow = EditWindow(selected_id)
+        self.editwindow.location_on_the_screen()
+        self.editwindow.show()
 
 
-# app = QApplication([])
-# window = Dashboard()
-# window.location_on_the_screen()
-# window.show()
-# app.exec_()
+app = QApplication([])
+window = Dashboard()
+window.location_on_the_screen()
+window.show()
+app.exec_()
