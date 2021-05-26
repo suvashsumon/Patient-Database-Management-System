@@ -419,7 +419,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="addrecord">
+      <widget class="QPushButton" name="savechanges">
        <property name="font">
         <font>
          <pointsize>15</pointsize>

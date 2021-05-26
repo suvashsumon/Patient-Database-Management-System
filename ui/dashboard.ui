@@ -424,6 +424,11 @@ background-color: rgb(32, 74, 135);</string>
       </column>
       <column>
        <property name="text">
+        <string>Xray</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Pic</string>
        </property>
       </column>
