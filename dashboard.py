@@ -71,11 +71,12 @@ class Dashboard(QMainWindow):
             self.tableWidget.setItem(rowindex, 7, QtWidgets.QTableWidgetItem(row[8]))
             self.tableWidget.setItem(rowindex, 8, QtWidgets.QTableWidgetItem(row[9]))
             self.tableWidget.setItem(rowindex, 9, QtWidgets.QTableWidgetItem(row[10]))
-            self.tableWidget.setItem(rowindex, 10, QtWidgets.QTableWidgetItem(row[11]))
-            self.tableWidget.setItem(rowindex, 11, QtWidgets.QTableWidgetItem(row[12]))
-            self.tableWidget.setItem(rowindex, 12, QtWidgets.QTableWidgetItem(row[13]))
+            self.tableWidget.setItem(rowindex, 10, QtWidgets.QTableWidgetItem(row[13]))
+            self.tableWidget.setItem(rowindex, 11, QtWidgets.QTableWidgetItem(row[11]))
+            self.tableWidget.setItem(rowindex, 12, QtWidgets.QTableWidgetItem(row[12]))
             self.tableWidget.setItem(rowindex, 13, QtWidgets.QTableWidgetItem(row[14]))
             self.tableWidget.setItem(rowindex, 14, QtWidgets.QTableWidgetItem(row[15]))
+            self.tableWidget.setItem(rowindex, 15, QtWidgets.QTableWidgetItem(row[16]))
             rowindex = rowindex + 1
 
         conn.commit()
@@ -84,7 +85,6 @@ class Dashboard(QMainWindow):
 #  this function is for open edit window to edit selected item
     def edit_work(self):
         selected_id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
-        print(selected_id)
         self.editwindow = EditWindow(selected_id)
         self.editwindow.location_on_the_screen()
         self.editwindow.show()
