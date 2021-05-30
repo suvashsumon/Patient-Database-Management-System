@@ -3,6 +3,7 @@ import sqlite3
 from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtWidgets
 from PyQt5 import *
+
 from addrecord import Addrecord
 import sys
 
@@ -44,6 +45,10 @@ class Dashboard(QMainWindow):
 
         # filter flag
         self.filterFlag = self.findChild(QComboBox, "filterFlag")
+
+        # delete button
+        self.deleteButton = self.findChild(QPushButton, "deleteButton")
+        self.deleteButton.clicked.connect(self.delete_clicked)
 
     def location_on_the_screen(self):
         qr = self.frameGeometry()
@@ -154,6 +159,25 @@ class Dashboard(QMainWindow):
                 self.tableWidget.setItem(rowindex, 14, QtWidgets.QTableWidgetItem(row[15]))
                 self.tableWidget.setItem(rowindex, 15, QtWidgets.QTableWidgetItem(row[16]))
                 rowindex = rowindex + 1
+
+    # this function is for delete button
+    def delete_clicked(self):
+        selected_id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
+        datapath = jsondata()
+        database = datapath.getdatapath() + "/database.db"
+        conn = sqlite3.connect(database)
+        sql = f"DELETE FROM entry WHERE ID={selected_id}"
+        msgBox = QMessageBox()
+        msgBox.setIcon(QMessageBox.Information)
+        msgBox.setText("Want to delete all data of ID = " + str(selected_id))
+        msgBox.setWindowTitle("Confirmation")
+        msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        returnValue = msgBox.exec()
+        if returnValue == QMessageBox.Ok:
+            conn.execute(sql)
+        conn.commit()
+        conn.close()
+        self.refresh_table()
 
 
 app = QApplication([])
