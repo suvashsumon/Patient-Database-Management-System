@@ -232,7 +232,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBox">
+       <widget class="QComboBox" name="filterFlag">
         <property name="font">
          <font>
           <pointsize>14</pointsize>
@@ -250,12 +250,12 @@
         </item>
         <item>
          <property name="text">
-          <string>Age</string>
+          <string>Sex</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Sex</string>
+          <string>Age</string>
          </property>
         </item>
         <item>
@@ -265,37 +265,22 @@
         </item>
         <item>
          <property name="text">
-          <string>C/C</string>
+          <string>CC</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>O/E</string>
+          <string>OE</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>R/F</string>
+          <string>RF</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Path. Report</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Radiology</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>CT</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>MRI</string>
+          <string>Path</string>
          </property>
         </item>
         <item>
@@ -305,7 +290,7 @@
         </item>
         <item>
          <property name="text">
-          <string>Comment</string>
+          <string>Comments</string>
          </property>
         </item>
        </widget>
@@ -325,29 +310,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QLineEdit" name="searchField">
         <property name="font">
          <font>
           <pointsize>14</pointsize>
          </font>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(32, 74, 135);</string>
-        </property>
-        <property name="text">
-         <string>Search</string>
         </property>
        </widget>
       </item>
@@ -374,12 +341,12 @@ background-color: rgb(32, 74, 135);</string>
       </column>
       <column>
        <property name="text">
-        <string>Age</string>
+        <string>Sex</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Sex</string>
+        <string>Age</string>
        </property>
       </column>
       <column>

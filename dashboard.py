@@ -38,6 +38,13 @@ class Dashboard(QMainWindow):
         self.editbtn = self.findChild(QPushButton, "edit")
         self.editbtn.clicked.connect(self.edit_work)
 
+        # search and filter field
+        self.filterField = self.findChild(QLineEdit, "searchField")
+        self.filterField.textChanged.connect(self.filter)
+
+        # filter flag
+        self.filterFlag = self.findChild(QComboBox, "filterFlag")
+
     def location_on_the_screen(self):
         qr = self.frameGeometry()
         cp = QDesktopWidget().availableGeometry().center()
@@ -88,6 +95,65 @@ class Dashboard(QMainWindow):
         self.editwindow = EditWindow(selected_id)
         self.editwindow.location_on_the_screen()
         self.editwindow.show()
+
+# this function is for filter system
+    def filter(self):
+        flag = self.filterFlag.currentText()
+        text = self.filterField.text()
+        if len(text) > 1:
+            flagRow = 1
+            if flag=="ID":
+                flagRow = 1
+            elif flag=="Name":
+                flagRow = 2
+            elif flag=="Sex":
+                flagRow = 3
+            elif flag == "Age":
+                flagRow = 4
+            elif flag == "Address":
+                flagRow = 5
+            elif flag == "CC":
+                flagRow = 6
+            elif flag == "OE":
+                flagRow = 7
+            elif flag == "RF":
+                flagRow = 8
+            elif flag == "Path":
+                flagRow = 9
+            elif flag == "Dxs":
+                flagRow = 15
+            else:
+                flagRow = 16
+            datapath = jsondata()
+            database = datapath.getdatapath() + "/database.db"
+            conn = sqlite3.connect(database)
+            sql = "SELECT * FROM entry"
+            cur = conn.cursor()
+            filterResult = []
+            for row in cur.execute(sql):
+                if(row[flagRow].lower().find(text.lower()) != -1):
+                    filterResult.append(row)
+
+            self.tableWidget.setRowCount(len(filterResult))
+            rowindex = 0
+            for row in filterResult:
+                self.tableWidget.setItem(rowindex, 0, QtWidgets.QTableWidgetItem(row[1]))
+                self.tableWidget.setItem(rowindex, 1, QtWidgets.QTableWidgetItem(row[2]))
+                self.tableWidget.setItem(rowindex, 2, QtWidgets.QTableWidgetItem(row[3]))
+                self.tableWidget.setItem(rowindex, 3, QtWidgets.QTableWidgetItem(row[4]))
+                self.tableWidget.setItem(rowindex, 4, QtWidgets.QTableWidgetItem(row[5]))
+                self.tableWidget.setItem(rowindex, 5, QtWidgets.QTableWidgetItem(row[6]))
+                self.tableWidget.setItem(rowindex, 6, QtWidgets.QTableWidgetItem(row[7]))
+                self.tableWidget.setItem(rowindex, 7, QtWidgets.QTableWidgetItem(row[8]))
+                self.tableWidget.setItem(rowindex, 8, QtWidgets.QTableWidgetItem(row[9]))
+                self.tableWidget.setItem(rowindex, 9, QtWidgets.QTableWidgetItem(row[10]))
+                self.tableWidget.setItem(rowindex, 10, QtWidgets.QTableWidgetItem(row[13]))
+                self.tableWidget.setItem(rowindex, 11, QtWidgets.QTableWidgetItem(row[11]))
+                self.tableWidget.setItem(rowindex, 12, QtWidgets.QTableWidgetItem(row[12]))
+                self.tableWidget.setItem(rowindex, 13, QtWidgets.QTableWidgetItem(row[14]))
+                self.tableWidget.setItem(rowindex, 14, QtWidgets.QTableWidgetItem(row[15]))
+                self.tableWidget.setItem(rowindex, 15, QtWidgets.QTableWidgetItem(row[16]))
+                rowindex = rowindex + 1
 
 
 app = QApplication([])
