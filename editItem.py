@@ -121,8 +121,8 @@ class EditWindow(QWidget):
             self.pathreport.insertPlainText(row[9])
             self.loadPics(row[10], "radiology")
             self.loadPics(row[11], "mri")
-            self.loadPics(row[12], "ctscan")
-            self.loadPics(row[13], "xray")
+            self.loadPics(row[12], "xray")
+            self.loadPics(row[13], "ctscan")
             self.loadPics(row[14], "pics")
             self.dxs.insertPlainText(row[15])
             self.comments.insertPlainText(row[16])
@@ -133,7 +133,8 @@ class EditWindow(QWidget):
     def savePic(self, list, id, flag):
         items = []
         for index in range(list.count()):
-            items.append(list.item(index))
+            if list.item(index).text() != '':
+                items.append(list.item(index))
         datapath = jsondata()
         filepath = datapath.getdatapath()
         files = []
