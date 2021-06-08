@@ -180,8 +180,7 @@ class Dashboard(QMainWindow):
         self.refresh_table()
 
 
-app = QApplication([])
-window = Dashboard()
-window.location_on_the_screen()
-window.show()
-app.exec_()
+#app = QApplication([])
+#window.location_on_the_screen()
+# window.show()
+# app.exec_()
