@@ -9,11 +9,11 @@ import sys
 class Login(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi("ui/imageviewer.ui", self)
+        uic.loadUi("ui/imageViewer.ui", self)
 
         self.image = self.findChild(QLabel, 'image')
 
-        pixmap = QPixmap('/home/suvashkumar/Desktop/programming/pdm_database/images/2002_Rediology_0.jpg')
+        pixmap = QPixmap('/home/suvashkumar/Desktop/programming/pdm_database/images/test.png')
         self.image.setPixmap(pixmap)
         self.image.setScaledContents(True)
 
