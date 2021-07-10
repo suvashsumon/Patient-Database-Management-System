@@ -7,15 +7,38 @@ import sys
 
 
 class Login(QWidget):
-    def __init__(self):
+    def __init__(self, images):
         super().__init__()
         uic.loadUi("ui/imageViewer.ui", self)
 
         self.image = self.findChild(QLabel, 'image')
+        self.previousBtn = self.findChild(QPushButton, 'previousImage')
+        self.nextBtn = self.findChild(QPushButton, 'nextImage')
+        self.imageCounter = self.findChild(QLabel, 'imageCounter')
 
-        pixmap = QPixmap('/home/suvashkumar/Desktop/programming/pdm_database/images/test.png')
-        self.image.setPixmap(pixmap)
+        self.previousBtn.clicked.connect(self.previousImage)
+        self.nextBtn.clicked.connect(self.nextImage)
+
+        self.counter = 0
+        self.total = len(images)
+        self.pixmap = QPixmap(self.images[self.counter])
+        self.image.setPixmap(self.pixmap)
         self.image.setScaledContents(True)
+
+
+    def previousImage(self):
+        self.counter -= 1
+        if self.counter < 0:
+            self.counter = self.total - 1
+        self.pixmap = QPixmap(self.images[self.counter])
+        self.image.setPixmap(self.pixmap)
+
+    def nextImage(self):
+        self.counter += 1
+        if self.counter > self.total - 1:
+            self.counter = 0
+        self.pixmap = QPixmap(self.images[self.counter])
+        self.image.setPixmap(self.pixmap)
 
 app = QApplication([])
 window = Login()
