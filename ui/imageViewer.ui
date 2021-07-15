@@ -106,7 +106,7 @@
        <property name="maximumSize">
         <size>
          <width>1500</width>
-         <height>800</height>
+         <height>900</height>
         </size>
        </property>
        <property name="styleSheet">
