@@ -6,6 +6,7 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QDesktopWidget, QApplication, QLineEdit, QComboBox, QPlainTextEdit, QPushButton, \
     QListWidget, QFileDialog
 
+from imageViewer import ImageViewer
 from userdataclass import jsondata
 
 
@@ -56,19 +57,49 @@ class ViewWindow(QWidget):
         self.move(qr.topLeft())
 
     def viewRediology_clicked(self):
-        pass
+        datapath = jsondata()
+        path = datapath.getdatapath() + "/images/"
+        images = []
+        for x in range(self.listRediology.count()):
+            images.append(path+self.listRediology.item(x).text())
+        self.imageviewer = ImageViewer(images)
+        self.imageviewer.show()
 
     def viewMri_clicked(self):
-        pass
+        datapath = jsondata()
+        path = datapath.getdatapath() + "/images/"
+        images = []
+        for x in range(self.listRediology.count()):
+            images.append(path+self.listRediology.item(x).text())
+        self.imageviewer = ImageViewer(images)
+        self.imageviewer.show()
 
     def viewCtscan_clicked(self):
-        pass
+        datapath = jsondata()
+        path = datapath.getdatapath() + "/images/"
+        images = []
+        for x in range(self.listCtscan.count()):
+            images.append(path+self.listCtscan.item(x).text())
+        self.imageviewer = ImageViewer(images)
+        self.imageviewer.show()
 
     def viewXray_clicked(self):
-        pass
+        datapath = jsondata()
+        path = datapath.getdatapath() + "/images/"
+        images = []
+        for x in range(self.listXray.count()):
+            images.append(path+self.listXray.item(x).text())
+        self.imageviewer = ImageViewer(images)
+        self.imageviewer.show()
 
     def viewPics_clicked(self):
-        pass
+        datapath = jsondata()
+        path = datapath.getdatapath() + "/images/"
+        images = []
+        for x in range(self.listPics.count()):
+            images.append(path+self.listPics.item(x).text())
+        self.imageviewer = ImageViewer(images)
+        self.imageviewer.show()
 
     def loadPics(self, jointpath, flag):
         paths = jointpath.split(',')

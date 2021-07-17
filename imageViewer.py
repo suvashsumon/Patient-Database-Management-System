@@ -1,7 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from userdataclass import jsondata
-from dashboard import Dashboard
 from PyQt5.QtGui import QIcon, QPixmap
 import sys
 
@@ -23,7 +22,7 @@ class ImageViewer(QWidget):
 
         self.counter = 0
         self.total = len(self.images)
-        self.pixmap = QPixmap("/home/suvashkumar/Desktop/programming/pdm_database/images/3505_Mri_0.jpg")
+        self.pixmap = QPixmap(self.images[self.counter])
         self.imagefield.setPixmap(self.pixmap)
         self.imagefield.setScaledContents(True)
         self.imageCounter.setText(str(self.counter+1) + "/" + str(self.total))
@@ -45,13 +44,13 @@ class ImageViewer(QWidget):
         self.imagefield.setPixmap(self.pixmap)
         self.imageCounter.setText(str(self.counter+1) + "/" + str(self.total))
 
-app = QApplication([])
-images = [
-    "/home/suvashkumar/Desktop/programming/pdm_database/images/3505_Mri_0.jpg",
-    "/home/suvashkumar/Desktop/programming/pdm_database/images/3508_Pics_0.jpg",
-    "/home/suvashkumar/Desktop/programming/pdm_database/images/hello.png",
-    "/home/suvashkumar/Desktop/programming/pdm_database/images/3508_Mri_0.png"
-]
-window = ImageViewer(images)
-window.show()
-app.exec_()
+# app = QApplication([])
+# images = [
+#     "/home/suvashkumar/Desktop/programming/pdm_database/images/3505_Mri_0.jpg",
+#     "/home/suvashkumar/Desktop/programming/pdm_database/images/3508_Pics_0.jpg",
+#     "/home/suvashkumar/Desktop/programming/pdm_database/images/hello.png",
+#     "/home/suvashkumar/Desktop/programming/pdm_database/images/3508_Mri_0.png"
+# ]
+# window = ImageViewer(images)
+# window.show()
+# app.exec_()
