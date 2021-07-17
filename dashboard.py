@@ -9,6 +9,7 @@ import sys
 
 from editItem import EditWindow
 from userdataclass import jsondata
+from viewwork import ViewWindow
 
 
 class Dashboard(QMainWindow):
@@ -49,6 +50,10 @@ class Dashboard(QMainWindow):
         # delete button
         self.deleteButton = self.findChild(QPushButton, "deleteButton")
         self.deleteButton.clicked.connect(self.delete_clicked)
+
+        # view button
+        self.viewButton = self.findChild(QPushButton, "viewButton")
+        self.viewButton.clicked.connect(self.view_clicked)
 
     def location_on_the_screen(self):
         qr = self.frameGeometry()
@@ -100,6 +105,13 @@ class Dashboard(QMainWindow):
         self.editwindow = EditWindow(selected_id)
         self.editwindow.location_on_the_screen()
         self.editwindow.show()
+
+#  this function is for open edit window to edit selected item
+    def view_clicked(self):
+        selected_id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
+        self.viewwindow = ViewWindow(selected_id)
+        self.viewwindow.location_on_the_screen()
+        self.viewwindow.show()
 
 # this function is for filter system
     def filter(self):
@@ -180,7 +192,8 @@ class Dashboard(QMainWindow):
         self.refresh_table()
 
 
-#app = QApplication([])
-#window.location_on_the_screen()
-# window.show()
-# app.exec_()
+app = QApplication([])
+window = Dashboard()
+window.location_on_the_screen()
+window.show()
+app.exec_()
