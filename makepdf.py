@@ -7,9 +7,10 @@ from userdataclass import jsondata
 
 class MakePdf:
     def __init__(self, id):
-        datapath = jsondata()
-        database = datapath.getdatapath() + "/database.db"
-        conn = sqlite3.connect(database)
+        self.datapath = jsondata()
+        self.database = self.datapath.getdatapath() + "/database.db"
+        self.path = self.datapath.getdatapath() + "/images/"
+        conn = sqlite3.connect(self.database)
         sql = "SELECT * FROM entry WHERE id=" + str(id)
         cur = conn.cursor()
         self.id = id
@@ -159,11 +160,129 @@ class MakePdf:
         pdf.set_font("Helvetica", '', size=11)
         pdf.multi_cell(190, 5, txt=self.comments, ln=0, align="L")
         pdf.cell(190, 2, "", ln=1)
+        curr_pos = pdf.get_y()
+        if curr_pos+55>275:
+            pdf.add_page()
+        pdf.set_font("times", 'B', size=12)
+        pdf.set_draw_color(0, 0, 0)
+        pdf.set_fill_color(0, 0, 0)
+        pdf.set_text_color(255, 255, 255)
+        pdf.set_line_width(1)
+        pdf.cell(190, 5, txt="Images of Rediology", border=1, ln=1, align="L", fill=1)
+        pdf.cell(190, 1, "", ln=1)
+        i = 1
+        j = 0
+        while 2*i <= len(self.rediology)+len(self.rediology)%2:
+            yy = pdf.get_y()
+            if j+1<=len(self.rediology):
+                pdf.image(self.path+self.rediology[j], x=10, h=50, w=90)
+                j += 1
+            if j+1<=len(self.rediology):
+                pdf.image(self.path+self.rediology[j], x=110, y=yy, h=50, w=90)
+                j += 1
+            pdf.ln(2)
+            i += 1
+            curr_pos = pdf.get_y()
+            if curr_pos + 55 > 275:
+                pdf.add_page()
+
+        pdf.set_font("times", 'B', size=12)
+        pdf.set_draw_color(0, 0, 0)
+        pdf.set_fill_color(0, 0, 0)
+        pdf.set_text_color(255, 255, 255)
+        pdf.set_line_width(1)
+        pdf.cell(190, 5, txt="Images of MRI", border=1, ln=1, align="L", fill=1)
+        pdf.cell(190, 1, "", ln=1)
+        i = 1
+        j = 0
+        while 2 * i <= len(self.mri) + len(self.mri) % 2:
+            yy = pdf.get_y()
+            if j + 1 <= len(self.mri):
+                pdf.image(self.path + self.mri[j], x=10, h=50, w=90)
+                j += 1
+            if j + 1 <= len(self.mri):
+                pdf.image(self.path + self.mri[j], x=110, y=yy, h=50, w=90)
+                j += 1
+            pdf.ln(2)
+            i += 1
+            curr_pos = pdf.get_y()
+            if curr_pos + 55 > 275:
+                pdf.add_page()
+
+        pdf.set_font("times", 'B', size=12)
+        pdf.set_draw_color(0, 0, 0)
+        pdf.set_fill_color(0, 0, 0)
+        pdf.set_text_color(255, 255, 255)
+        pdf.set_line_width(1)
+        pdf.cell(190, 5, txt="Images of X-Ray", border=1, ln=1, align="L", fill=1)
+        pdf.cell(190, 1, "", ln=1)
+        i = 1
+        j = 0
+        while 2 * i <= len(self.xray) + len(self.xray) % 2:
+            yy = pdf.get_y()
+            if j + 1 <= len(self.xray):
+                pdf.image(self.path + self.xray[j], x=10, h=50, w=90)
+                j += 1
+            if j + 1 <= len(self.xray):
+                pdf.image(self.path + self.xray[j], x=110, y=yy, h=50, w=90)
+                j += 1
+            pdf.ln(2)
+            i += 1
+            curr_pos = pdf.get_y()
+            if curr_pos + 55 > 275:
+                pdf.add_page()
+
+        pdf.set_font("times", 'B', size=12)
+        pdf.set_draw_color(0, 0, 0)
+        pdf.set_fill_color(0, 0, 0)
+        pdf.set_text_color(255, 255, 255)
+        pdf.set_line_width(1)
+        pdf.cell(190, 5, txt="Images of CT Scan", border=1, ln=1, align="L", fill=1)
+        pdf.cell(190, 1, "", ln=1)
+        i = 1
+        j = 0
+        while 2 * i <= len(self.ctscan) + len(self.ctscan) % 2:
+            yy = pdf.get_y()
+            if j + 1 <= len(self.ctscan):
+                pdf.image(self.path + self.ctscan[j], x=10, h=50, w=90)
+                j += 1
+            if j + 1 <= len(self.ctscan):
+                pdf.image(self.path + self.ctscan[j], x=110, y=yy, h=50, w=90)
+                j += 1
+            pdf.ln(2)
+            i += 1
+            curr_pos = pdf.get_y()
+            if curr_pos + 55 > 275:
+                pdf.add_page()
+
+        pdf.set_font("times", 'B', size=12)
+        pdf.set_draw_color(0, 0, 0)
+        pdf.set_fill_color(0, 0, 0)
+        pdf.set_text_color(255, 255, 255)
+        pdf.set_line_width(1)
+        pdf.cell(190, 5, txt="Other Images", border=1, ln=1, align="L", fill=1)
+        pdf.cell(190, 1, "", ln=1)
+        i = 1
+        j = 0
+        while 2 * i <= len(self.pics) + len(self.pics) % 2:
+            yy = pdf.get_y()
+            if j + 1 <= len(self.pics):
+                pdf.image(self.path + self.pics[j], x=10, h=50, w=90)
+                j += 1
+            if j + 1 <= len(self.pics):
+                pdf.image(self.path + self.pics[j], x=110, y=yy, h=50, w=90)
+                j += 1
+            pdf.ln(2)
+            i += 1
+            curr_pos = pdf.get_y()
+            if curr_pos + 55 > 275:
+                pdf.add_page()
+
 
         pdf.output("/home/suvashkumar/Desktop/simple_demo.pdf")
 
 
 
 if __name__ == "__main__":
-    obj = MakePdf(2113)
+    obj = MakePdf(3515)
     obj.printwork()
