@@ -1,5 +1,6 @@
 import sqlite3
 
+from PyQt5.QtWidgets import QFileDialog
 from fpdf import FPDF
 
 from userdataclass import jsondata
@@ -278,11 +279,11 @@ class MakePdf:
             if curr_pos + 55 > 275:
                 pdf.add_page()
 
+        destination = QFileDialog.getExistingDirectory()
+        pdf.output(destination+ "/" +str(self.id) + ".pdf")
 
-        pdf.output("/home/suvashkumar/Desktop/simple_demo.pdf")
 
-
-
-if __name__ == "__main__":
-    obj = MakePdf(3515)
-    obj.printwork()
+#
+# if __name__ == "__main__":
+#     obj = MakePdf(3515)
+#     obj.printwork()

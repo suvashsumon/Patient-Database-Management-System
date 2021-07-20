@@ -8,6 +8,7 @@ from addrecord import Addrecord
 import sys
 
 from editItem import EditWindow
+from makepdf import MakePdf
 from userdataclass import jsondata
 from viewwork import ViewWindow
 
@@ -54,6 +55,10 @@ class Dashboard(QMainWindow):
         # view button
         self.viewButton = self.findChild(QPushButton, "viewButton")
         self.viewButton.clicked.connect(self.view_clicked)
+
+        # print button
+        self.viewButton = self.findChild(QPushButton, "printButton")
+        self.viewButton.clicked.connect(self.print_clicked)
 
     def location_on_the_screen(self):
         qr = self.frameGeometry()
@@ -190,6 +195,12 @@ class Dashboard(QMainWindow):
         conn.commit()
         conn.close()
         self.refresh_table()
+
+    def print_clicked(self):
+        selected_id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
+        obj = MakePdf(selected_id)
+        obj.printwork()
+        QMessageBox.about(self, "Success", "Pdf Saved.")
 
 
 app = QApplication([])

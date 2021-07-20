@@ -4,9 +4,10 @@ import sqlite3
 
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QDesktopWidget, QApplication, QLineEdit, QComboBox, QPlainTextEdit, QPushButton, \
-    QListWidget, QFileDialog
+    QListWidget, QFileDialog, QMessageBox
 
 from imageViewer import ImageViewer
+from makepdf import MakePdf
 from userdataclass import jsondata
 
 
@@ -14,6 +15,8 @@ class ViewWindow(QWidget):
     def __init__(self, ids):
         super().__init__()
         uic.loadUi("ui/viewrecord.ui", self)
+
+        self.idd = ids
 
         # id setting
         self.id = self.findChild(QLineEdit, "id")
@@ -155,8 +158,9 @@ class ViewWindow(QWidget):
         pass
 
     def print_clicked(self):
-        # self.close()
-        pass
+        obj = MakePdf(self.idd)
+        obj.printwork()
+        QMessageBox.about(self, "Success", "Pdf Saved.")
 
 # app = QApplication([])
 # window = EditWindow()
