@@ -155,40 +155,8 @@ class ViewWindow(QWidget):
         pass
 
     def print_clicked(self):
-        id = self.id.text()
-        name = self.name.text()
-        sex = self.sex.currentText()
-        age = self.age.text()
-        address = self.address.text()
-        cc = self.cc.toPlainText()
-        oe = self.oe.toPlainText()
-        rf = self.rf.toPlainText()
-        pathreport = self.pathreport.toPlainText()
-        # radiology = self.printlist(self.listRediology)
-        # mri = self.printlist(self.listMri)
-        # ctscan = self.printlist(self.listCtscan)
-        # xray = self.printlist(self.listXray)
-        # pics = self.printlist(self.listPics)
-        dxs = self.dxs.toPlainText()
-        comments = self.comments.toPlainText()
-
-        # saving pics
-        radiology = self.savePic(self.listRediology,id,"Rediology")
-        mri = self.savePic(self.listMri,id,"Mri")
-        xray = self.savePic(self.listXray,id,"Xray")
-        ctscan = self.savePic(self.listCtscan,id,"Ctscan")
-        pics = self.savePic(self.listPics,id,"Pics")
-
-        # insering data to database
-        datapath = jsondata()
-        database = datapath.getdatapath()+"/database.db"
-        conn = sqlite3.connect(database)
-        sql = f"UPDATE entry SET Name='{name}', Sex='{sex}', Age='{age}', Address='{address}', CC='{cc}', OE='{oe}', RF='{rf}', Path='{pathreport}', Rediology='{radiology}', Mri='{mri}', Xray='{xray}', Ctscan='{ctscan}', Pics='{pics}', Dxs='{dxs}', Comments='{comments}' WHERE ID='{str(id)}'"
-        conn.execute(sql)
-        conn.commit()
-        conn.close()
-
-        self.close()
+        # self.close()
+        pass
 
 # app = QApplication([])
 # window = EditWindow()
