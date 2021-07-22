@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>682</width>
-    <height>1581</height>
+    <width>775</width>
+    <height>578</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,6 +47,11 @@
    </item>
    <item>
     <widget class="QScrollArea" name="scrollArea">
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
@@ -55,8 +60,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>662</width>
-        <height>1477</height>
+        <width>738</width>
+        <height>1239</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -66,6 +71,11 @@
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
             <widget class="QLabel" name="label_2">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>ID :</string>
              </property>
@@ -73,6 +83,11 @@
            </item>
            <item>
             <widget class="QLineEdit" name="id">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="readOnly">
               <bool>true</bool>
              </property>
@@ -80,13 +95,24 @@
            </item>
            <item>
             <widget class="QLabel" name="label_3">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>  Name :</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="name"/>
+            <widget class="QLineEdit" name="name">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -94,6 +120,11 @@
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
             <widget class="QLabel" name="label_5">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Sex :</string>
              </property>
@@ -101,6 +132,11 @@
            </item>
            <item>
             <widget class="QComboBox" name="sex">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <item>
               <property name="text">
                <string>Male</string>
@@ -120,6 +156,11 @@
            </item>
            <item>
             <widget class="QLabel" name="label_4">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>  Age :</string>
              </property>
@@ -127,6 +168,11 @@
            </item>
            <item>
             <widget class="QLineEdit" name="age">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="maxLength">
               <number>10</number>
              </property>
@@ -134,60 +180,120 @@
            </item>
            <item>
             <widget class="QLabel" name="label_6">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>  Address :</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="address"/>
+            <widget class="QLineEdit" name="address">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
          <item>
           <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>C/C :</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="cc"/>
+          <widget class="QPlainTextEdit" name="cc">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_8">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>O. E :</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="oe"/>
+          <widget class="QPlainTextEdit" name="oe">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_9">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>R.F. :</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="rf"/>
+          <widget class="QPlainTextEdit" name="rf">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_10">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Path. Report :</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="pathreport"/>
+          <widget class="QPlainTextEdit" name="pathreport">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
             <widget class="QLabel" name="label">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Rediology :</string>
              </property>
@@ -195,6 +301,11 @@
            </item>
            <item>
             <spacer name="horizontalSpacer">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -208,6 +319,11 @@
            </item>
            <item>
             <widget class="QPushButton" name="addRediology">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -220,12 +336,23 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listRadiology"/>
+          <widget class="QListWidget" name="listRadiology">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
             <widget class="QLabel" name="label_11">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>MRI :</string>
              </property>
@@ -233,6 +360,11 @@
            </item>
            <item>
             <spacer name="horizontalSpacer_2">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -246,6 +378,11 @@
            </item>
            <item>
             <widget class="QPushButton" name="addMri">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -258,12 +395,23 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listMri"/>
+          <widget class="QListWidget" name="listMri">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
            <item>
             <widget class="QLabel" name="label_12">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>X-Ray</string>
              </property>
@@ -271,6 +419,11 @@
            </item>
            <item>
             <spacer name="horizontalSpacer_3">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -284,6 +437,11 @@
            </item>
            <item>
             <widget class="QPushButton" name="addXray">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -296,12 +454,23 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listXray"/>
+          <widget class="QListWidget" name="listXray">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
            <item>
             <widget class="QLabel" name="label_13">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>CT Scan :</string>
              </property>
@@ -309,6 +478,11 @@
            </item>
            <item>
             <spacer name="horizontalSpacer_4">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -322,6 +496,11 @@
            </item>
            <item>
             <widget class="QPushButton" name="addCtscan">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -334,12 +513,23 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listCtscan"/>
+          <widget class="QListWidget" name="listCtscan">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
            <item>
             <widget class="QLabel" name="label_14">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Pics :</string>
              </property>
@@ -347,6 +537,11 @@
            </item>
            <item>
             <spacer name="horizontalSpacer_5">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -360,6 +555,11 @@
            </item>
            <item>
             <widget class="QPushButton" name="addPics">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -372,27 +572,55 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listPics"/>
+          <widget class="QListWidget" name="listPics">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_15">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Dxs. :</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="dxs"/>
+          <widget class="QPlainTextEdit" name="dxs">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_16">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Comments :</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="comments"/>
+          <widget class="QPlainTextEdit" name="comments">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -404,6 +632,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout_8">
      <item>
       <spacer name="horizontalSpacer_6">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -419,7 +652,7 @@
       <widget class="QPushButton" name="addrecord">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>16</pointsize>
          <weight>50</weight>
          <bold>false</bold>
         </font>
