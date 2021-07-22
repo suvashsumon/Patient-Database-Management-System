@@ -415,6 +415,18 @@
         <pointsize>11</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QHeaderView::section{
+text-align:center;
+background:#CDCDCD;
+padding:1px;
+margin:0px;
+color:#000;
+border:1px solid #BABABA;
+border-left-width:0;
+font-size: 11pt;
+}</string>
+      </property>
       <column>
        <property name="text">
         <string>ID</string>
