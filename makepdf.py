@@ -179,7 +179,8 @@ class MakePdf:
         pdf.set_fill_color(0, 0, 0)
         pdf.set_text_color(255, 255, 255)
         pdf.set_line_width(1)
-        pdf.cell(190, 5, txt="Images of Rediology", border=1, ln=1, align="L", fill=1)
+        if len(self.rediology)>0:
+            pdf.cell(190, 5, txt="Images of Rediology", border=1, ln=1, align="L", fill=1)
         pdf.cell(190, 1, "", ln=1)
         i = 1
         j = 0
@@ -202,7 +203,8 @@ class MakePdf:
         pdf.set_fill_color(0, 0, 0)
         pdf.set_text_color(255, 255, 255)
         pdf.set_line_width(1)
-        pdf.cell(190, 5, txt="Images of MRI", border=1, ln=1, align="L", fill=1)
+        if len(self.mri)>0:
+            pdf.cell(190, 5, txt="Images of MRI", border=1, ln=1, align="L", fill=1)
         pdf.cell(190, 1, "", ln=1)
         i = 1
         j = 0
@@ -225,7 +227,8 @@ class MakePdf:
         pdf.set_fill_color(0, 0, 0)
         pdf.set_text_color(255, 255, 255)
         pdf.set_line_width(1)
-        pdf.cell(190, 5, txt="Images of X-Ray", border=1, ln=1, align="L", fill=1)
+        if len(self.xray)>0:
+            pdf.cell(190, 5, txt="Images of X-Ray", border=1, ln=1, align="L", fill=1)
         pdf.cell(190, 1, "", ln=1)
         i = 1
         j = 0
@@ -248,7 +251,8 @@ class MakePdf:
         pdf.set_fill_color(0, 0, 0)
         pdf.set_text_color(255, 255, 255)
         pdf.set_line_width(1)
-        pdf.cell(190, 5, txt="Images of CT Scan", border=1, ln=1, align="L", fill=1)
+        if len(self.ctscan)>0:
+            pdf.cell(190, 5, txt="Images of CT Scan", border=1, ln=1, align="L", fill=1)
         pdf.cell(190, 1, "", ln=1)
         i = 1
         j = 0
@@ -271,7 +275,8 @@ class MakePdf:
         pdf.set_fill_color(0, 0, 0)
         pdf.set_text_color(255, 255, 255)
         pdf.set_line_width(1)
-        pdf.cell(190, 5, txt="Other Images", border=1, ln=1, align="L", fill=1)
+        if len(self.pics)>0:
+            pdf.cell(190, 5, txt="Other Images", border=1, ln=1, align="L", fill=1)
         pdf.cell(190, 1, "", ln=1)
         i = 1
         j = 0
