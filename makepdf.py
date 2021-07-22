@@ -31,10 +31,20 @@ class MakePdf:
             self.rf = row[8]
             self.pathreport = row[9]
             self.rediology = row[10].split(',')
+            if self.rediology[0]=="":
+                self.rediology = []
             self.mri = row[11].split(',')
+            if self.mri[0]=="":
+                self.mri = []
             self.xray = row[12].split(',')
+            if self.xray[0]=="":
+                self.xray = []
             self.ctscan = row[13].split(',')
+            if self.ctscan[0]=="":
+                self.ctscan = []
             self.pics = row[14].split(',')
+            if self.pics[0]=="":
+                self.pics = []
             self.dxs = row[15]
             self.comments = row[16]
         conn.commit()
