@@ -7,6 +7,7 @@ from PyQt5 import *
 from dashboard import Dashboard
 from userdataclass import  jsondata
 import sys
+import sqlite3
 
 
 class Settings(QWidget):
@@ -50,6 +51,37 @@ class Settings(QWidget):
             os.mkdir(dirpath)
             dirpath = os.path.join(dirpath, 'images')
             os.mkdir(dirpath)
+            # creating database and table 
+            entry_table = """CREATE TABLE "entry" (
+                            "SL"	INTEGER PRIMARY KEY AUTOINCREMENT,
+                            "ID"	TEXT,
+                            "Name"	TEXT,
+                            "Sex"	TEXT,
+                            "Age"	TEXT,
+                            "Address"	TEXT,
+                            "CC"	TEXT,
+                            "OE"	TEXT,
+                            "RF"	TEXT,
+                            "Path"	TEXT,
+                            "Rediology"	TEXT,
+                            "Mri"	TEXT,
+                            "Xray"	TEXT,
+                            "Ctscan"	TEXT,
+                            "Pics"	TEXT,
+                            "Dxs"	TEXT,
+                            "Comments"	TEXT
+                        );"""
+            config_table = """CREATE TABLE "config" (
+                                "currentId"	TEXT
+                            );"""
+            datapath = jsondata()
+            database = datapath.getdatapath() + "/database.db"
+            conn = sqlite3.connect(database)
+            conn.execute(entry_table)
+            conn.execute(config_table)
+            conn.execute("""INSERT INTO "config" ("currentId") VALUES("1001");""")
+            conn.commit()
+            conn.close()
             # open dashboard
             self.dashboard = Dashboard()
             self.dashboard.location_on_the_screen()
