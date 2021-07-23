@@ -72,8 +72,8 @@ class ViewWindow(QWidget):
         datapath = jsondata()
         path = datapath.getdatapath() + "/images/"
         images = []
-        for x in range(self.listRediology.count()):
-            images.append(path+self.listRediology.item(x).text())
+        for x in range(self.listMri.count()):
+            images.append(path+self.listMri.item(x).text())
         self.imageviewer = ImageViewer(images)
         self.imageviewer.show()
 
