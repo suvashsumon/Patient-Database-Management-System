@@ -203,8 +203,8 @@ class Dashboard(QMainWindow):
         QMessageBox.about(self, "Success", "Pdf Saved.")
 
 
-app = QApplication([])
-window = Dashboard()
-window.location_on_the_screen()
-window.show()
-app.exec_()
+# app = QApplication([])
+# window = Dashboard()
+# window.location_on_the_screen()
+# window.show()
+# app.exec_()
