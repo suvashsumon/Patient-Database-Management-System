@@ -410,6 +410,23 @@
     </item>
     <item>
      <widget class="QTableWidget" name="tableWidget">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QHeaderView::section{
+text-align:center;
+background:#CDCDCD;
+padding:1px;
+margin:0px;
+color:#000;
+border:1px solid #BABABA;
+border-left-width:0;
+font-size: 11pt;
+}</string>
+      </property>
       <column>
        <property name="text">
         <string>ID</string>
@@ -500,7 +517,7 @@
      <x>0</x>
      <y>0</y>
      <width>827</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
