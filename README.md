@@ -12,6 +12,7 @@ Follow those steps:
 * Python 3.0+
 * PyQt5
 * FPDF2
+* SqLite 3
 * Qt Designer
 
 # Some Screenshots
