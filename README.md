@@ -8,7 +8,7 @@ Follow those steps:
 6. That's all.
 
 
-# Dependency
+# Dependency for Development
 * Python 3.0+
 * PyQt5
 * FPDF2
@@ -29,7 +29,7 @@ Follow those steps:
 ![Show Graph](/screenshots/showgraph.png)
 
 
-# Donate
-Bkash: 01717601509
-Rocekt: 01717601609
-Nagad: 01717601509
+# Buy Me a Cup of Coffee
+Bkash: 01717601509  
+Rocket: 01717601609  
+Nagad: 01717601509  
