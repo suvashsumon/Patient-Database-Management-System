@@ -28,9 +28,3 @@ Follow those steps:
 ![Settings Page](/screenshots/settings.png)
 
 ![Show Graph](/screenshots/showgraph.png)
-
-
-# Buy Me a Cup of Coffee
-Bkash: 01717601509  
-Rocket: 01717601609  
-Nagad: 01717601509  
